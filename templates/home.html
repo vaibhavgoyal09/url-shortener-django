@@ -7,7 +7,7 @@
   <title>Url Shortener</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="{% static 'css/home.css' %}" rel="stylesheet">
+  <link href="{%static 'css/home.css' %}" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
   <div class="pageContent">
     <header>
       <div class="topLeftTitlePanel">
-        <img class="logo" src="{% static 'img/logo.svg' %}" alt=" logo" />
+        <img class="logo" src="{% static 'img/logo.svg' %}" alt="logo" />
         <ul class="topBarList">
           <li><a href="#">Features</a></li>
           <li><a href="#">Pricing</a></li>
@@ -48,8 +48,15 @@
         <div class="enterLinkPanel">
           <div class="linkInternalContent bgWithImg">
             <div class="inputLinkContent">
-              <input id="inputLinkInput" type="text" name="input_link" placeholder="Paste your link here">
+              <input class="inputText" id="inputLinkInput" type="text" name="input_link"
+                placeholder="Paste your link here">
               <button id="shortenItBtn" class="pBtn">Shorten It</button>
+            </div>
+            <div class="outputLinkContent">
+              <span class="shortenedUrlContent">
+                <a href="{{shortened_url}}" target="_blank">{{shortened_url}}</a>
+              </span>
+              <button class="copyUrlBtn" type="button">Copy</button>
             </div>
           </div>
         </div>
@@ -59,6 +66,24 @@
           <h3>Advanced Statistics</h3>
           <p>Track how your links are performing across the web <br /> with our advanced statistics dashboard.</p>
           <div class="statisticsSlides">
+            <div class="statisticCard">
+              <img src="{% static 'img/icon-brand-recognition.svg' %}" alt="brand recognition" />
+              <h4>Brand Recognition</h4>
+              <p>Boost your brand recognition with <br /> each click. Generic links don't mean a <br /> thing. Branded
+                links help instill <br /> confidence in your content.</p>
+            </div>
+            <div class="statisticCard">
+              <img src="{% static 'img/icon-detailed-records.svg' %}" alt="detailed records" />
+              <h4>Detailed Records</h4>
+              <p>Gain insights into who is clicking your <br /> links. Knowing when and where <br /> people engage with
+                your content <br /> helps form better descisions.</p>
+            </div>
+            <div class="statisticCard">
+              <img src="{% static 'img/icon-fully-customizable.svg' %}" alt="fully customizable" />
+              <h4>Fully Customizable</h4>
+              <p>Improve brand awareness and <br /> content discoverability through <br /> customizable links,
+                supercharging <br /> audience engagement.</p>
+            </div>
 
           </div>
         </div>

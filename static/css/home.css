@@ -186,7 +186,7 @@ a {
 
 .bgWithImg {
    background-color: var(--darkBlue);
-  background-image: url("bg1.svg");
+  background-image: url("/static/img/bg1.svg");
 }
 
 .linkInternalContent {
@@ -207,7 +207,7 @@ a {
   border: none;
 }
 
-#inputLinkInput {
+.inputText {
   width: 100%;
   color: black;
   font-size: 16px;
@@ -240,9 +240,47 @@ a {
   margin-left: 16px;
 }
 
+.outputLinkContent {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+   padding: 16px;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--white);
+  box-sizing: border-box;
+}
+
+.shortenedUrlContent {
+  width: 100%;
+   font-weight: 500;
+  color: #0236b9;
+  display: inline-flex;
+  align-items: center;
+}
+  
+.copyUrlBtn {
+  background-color: hsl(180, 66%, 96%);
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  color: var(--primary);
+  font-family: Roboto;
+  font-weight: 500;
+  cursor: pointer;
+  height: 30px;
+  padding: 0px;
+  width: 80px;
+  display: inline-block;
+  margin-left: 16px;
+}
+
 .statisticsSection {
   margin-top: 4rem;
   padding: 0px 10%;
+  margin-bottom: 4rem;
 }
 
 .statisticsSection h3 {
@@ -253,13 +291,48 @@ a {
 .statisticsSlides {
   position: relative;
   display: flex;
+  width: 100%;
+  padding: 0px 20px;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .statisticsSection p {
   margin-top: 20px;
   text-align: center;
   color: var(--secondaryText);
+}
+
+.statisticCard {
+  margin-top: 4rem;
+  position: relative;
+ }
+
+.statisticCard img {
+  width: 100px;
+  position: relative;
+  right: 30px;
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.statisticCard h4 {
+  text-align: start;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 24px;
+  font-family: Poppins;
+}
+
+.statisticCard p {
+  text-align: start;
+  font-family: Roboto;
+  font-weight: 400;
+  margin-top: 8px;
+  line-height: 25px;
 }
 
 .pageContent footer {
@@ -327,7 +400,7 @@ a {
 .bottomList {
   display: flex;
   flex-direction: column;
-  padding: 0px 24px;
+  padding: 0px 40px;
 }
 
 .bottomRightContent span {
